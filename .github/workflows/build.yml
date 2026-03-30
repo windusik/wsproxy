@@ -39,13 +39,13 @@ jobs:
         run: pyinstaller packaging/windows.spec --noconfirm
 
       - name: Rename artifact
-        run: mv dist/WsProxy.exe dist/WsProxy_windows.exe
+        run: mv dist/TgWsProxy.exe dist/TgWsProxy_windows.exe
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
-          name: WsProxy
-          path: dist/WsProxy_windows.exe
+          name: TgWsProxy
+          path: dist/TgWsProxy_windows.exe
 
   build-win7:
     runs-on: windows-latest
@@ -72,13 +72,13 @@ jobs:
         run: pyinstaller packaging/windows.spec --noconfirm
 
       - name: Rename artifact
-        run: mv dist/TgWsProxy.exe dist/WsProxy_windows_7_${{ matrix.suffix }}.exe
+        run: mv dist/TgWsProxy.exe dist/TgWsProxy_windows_7_${{ matrix.suffix }}.exe
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
           name: TgWsProxy-win7-${{ matrix.suffix }}
-          path: dist/WsProxy_windows_7_${{ matrix.suffix }}.exe
+          path: dist/TgWsProxy_windows_7_${{ matrix.suffix }}.exe
 
   build-macos:
     runs-on: macos-latest
