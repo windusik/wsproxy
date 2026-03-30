@@ -333,9 +333,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.version }}
-          name: "TG WS Proxy ${{ github.event.inputs.version }}"
+          name: "WS Proxy ${{ github.event.inputs.version }}"
           body: |
-            ## TG WS Proxy ${{ github.event.inputs.version }}
+            ## WS Proxy ${{ github.event.inputs.version }}
           files: |
             dist/TgWsProxy_windows.exe
             dist/TgWsProxy_windows_7_64bit.exe
