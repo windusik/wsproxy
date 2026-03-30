@@ -1,0 +1,13 @@
+[HKEY_CLASSES_ROOT\tg]
+"URL Protocol"=""
+@="URL:Telegram Link"
+
+[HKEY_CLASSES_ROOT\tg\DefaultIcon]
+@="\"C:\\Users\\USER\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe,1\""
+
+[HKEY_CLASSES_ROOT\tg\shell]
+
+[HKEY_CLASSES_ROOT\tg\shell\open]
+
+[HKEY_CLASSES_ROOT\tg\shell\open\command]
+@="\"C:\\Users\\USER\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe\" -- \"%1\""
