@@ -39,7 +39,7 @@ jobs:
         run: pyinstaller packaging/windows.spec --noconfirm
 
       - name: Rename artifact
-        run: mv dist/WsProxy.exe dist/TgWsProxy_windows.exe
+        run: mv dist/WsProxy.exe dist/WsProxy_windows.exe
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
