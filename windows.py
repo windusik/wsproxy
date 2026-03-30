@@ -67,15 +67,15 @@ _MB_YESNO_Q = 0x24
 _IDYES = 6
 
 
-def _show_error(text: str, title: str = "TG WS Proxy — Ошибка") -> None:
+def _show_error(text: str, title: str = "WSPROXY — Ошибка") -> None:
     _u32.MessageBoxW(None, text, title, _MB_OK_ERR)
 
 
-def _show_info(text: str, title: str = "TG WS Proxy") -> None:
+def _show_info(text: str, title: str = "WSPROXY") -> None:
     _u32.MessageBoxW(None, text, title, _MB_OK_INFO)
 
 
-def _ask_yes_no(text: str, title: str = "TG WS Proxy") -> bool:
+def _ask_yes_no(text: str, title: str = "WSPROXY") -> bool:
     return _u32.MessageBoxW(None, text, title, _MB_YESNO_Q) == _IDYES
 
 
@@ -212,7 +212,7 @@ def _edit_config_dialog() -> None:
             h += 100
 
         root = create_ctk_toplevel(
-            ctk, title="TG WS Proxy — Настройки", width=w, height=h, theme=theme,
+            ctk, title="WSPROXY — Настройки", width=w, height=h, theme=theme,
             after_create=lambda r: r.iconbitmap(ICON_PATH),
         )
         fpx, fpy = CONFIG_DIALOG_FRAME_PAD
@@ -232,7 +232,7 @@ def _edit_config_dialog() -> None:
             from tkinter import messagebox
             merged = validate_config_form(widgets, DEFAULT_CONFIG, include_autostart=_supports_autostart())
             if isinstance(merged, str):
-                messagebox.showerror("TG WS Proxy — Ошибка", merged, parent=root)
+                messagebox.showerror("WSPROXY — Ошибка", merged, parent=root)
                 return
             save_config(merged)
             _config.update(merged)
@@ -274,7 +274,7 @@ def _show_first_run() -> None:
         theme = ctk_theme_for_platform()
         w, h = FIRST_RUN_SIZE
         root = create_ctk_toplevel(
-            ctk, title="TG WS Proxy", width=w, height=h, theme=theme,
+            ctk, title="WSProxy", width=w, height=h, theme=theme,
             after_create=lambda r: r.iconbitmap(ICON_PATH),
         )
 
@@ -333,7 +333,7 @@ def run_tray() -> None:
     _show_first_run()
     check_ipv6_warning(_show_info)
 
-    _tray_icon = pystray.Icon(APP_NAME, load_icon(), "TG WS Proxy", menu=_build_menu())
+    _tray_icon = pystray.Icon(APP_NAME, load_icon(), "WS Proxy", menu=_build_menu())
     log.info("Tray icon running")
     _tray_icon.run()
 
