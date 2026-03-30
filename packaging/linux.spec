@@ -12,7 +12,7 @@ block_cipher = None
 import customtkinter
 ctk_path = os.path.dirname(customtkinter.__file__)
 
-# Collect gi (PyGObject) submodules and data so pystray._appindicator works
+# Collect gi (PyGObject) submodules and data so pystray._appindicator works 
 gi_hiddenimports = collect_submodules('gi')
 gi_datas = collect_data_files('gi')
 
