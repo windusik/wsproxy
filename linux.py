@@ -53,15 +53,15 @@ def _msgbox(kind: str, text: str, title: str, **kw):
     return result
 
 
-def _show_error(text: str, title: str = "TG WS Proxy — Ошибка") -> None:
+def _show_error(text: str, title: str = "WS Proxy — Ошибка") -> None:
     _msgbox("showerror", text, title)
 
 
-def _show_info(text: str, title: str = "TG WS Proxy") -> None:
+def _show_info(text: str, title: str = "WS Proxy") -> None:
     _msgbox("showinfo", text, title)
 
 
-def _ask_yes_no(text: str, title: str = "TG WS Proxy") -> bool:
+def _ask_yes_no(text: str, title: str = "WS Proxy") -> bool:
     return bool(_msgbox("askyesno", text, title))
 
 
